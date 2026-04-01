@@ -2,7 +2,7 @@
   Stats.jsx
   Displays game stats grouped by season or tournament name.
   Fetches all games from Firebase Firestore and calculates totals
-  including goals saved, goals allowed, goal kicks, punts, and clean sheets.
+  including goals saved, goals allowed, goal kicks, punts, pass backs and clean sheets.
   Users can filter by All, Season, or Tournament using the filter buttons.
 */
 

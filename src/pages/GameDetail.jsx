@@ -52,7 +52,6 @@ function GameDetail() {
     }
 
     const handleEditSave = async () => {
-        console.log('Saving edit data:', editData)
         await updateDoc(doc(db, 'games', id), {
             opponent: editData.opponent,
             date: editData.date,
@@ -86,7 +85,7 @@ function GameDetail() {
                 <>
                     <div className="flex justify-between items-center mb-6">
                         <h1 className="text-white text-3xl font-bold">vs {game.opponent}</h1>
-                        {game.cleanSheet && <span className="text-yellow-400 fold-bold">✨ Clean Sheet</span>}
+                        {game.cleanSheet && <span className="text-yellow-400 font-bold">✨ Clean Sheet</span>}
                     </div>
 
                     <p className="text-green-300 mb-1">{game.date}</p>
@@ -107,7 +106,7 @@ function GameDetail() {
                         ))}
                     </div>
 
-                    <div className="flex gap-4 met-8">
+                    <div className="flex gap-4 mt-8">
                         <button
                             onClick={() => setEditing(true)}
                             className="flex-1 bg-white text-green-900 font-bold py-4 rounded-2xl">

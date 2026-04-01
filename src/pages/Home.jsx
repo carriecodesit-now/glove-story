@@ -14,12 +14,12 @@ function Home() {
     return (
         <div className="min-h-screen bg-green-900 flex flex-col items-center justify-center">
             <h1 className="text-white text-5xl font-bold mb-2">⚽ Glove Story</h1>
-            <p className="text-white300 text-lg mb10">Goalkeeper Stats Tracker</p>
+            <p className="text-white-300 text-lg mb-10">Goalkeeper Stats Tracker</p>
 
             <div className="flex flex-col gap-4 w-full max-w-xs">
                 <button 
                     onClick={ () => navigate('/live')}
-                    className="bg-red-500 hover:bg-red-600 text-white text-xl fold-bold py-5 rounded-2xl shadow-lg">
+                    className="bg-red-500 hover:bg-red-600 text-white text-xl font-bold py-5 rounded-2xl shadow-lg">
                     🔴 Live Game Tracker
                 </button>
                 <button

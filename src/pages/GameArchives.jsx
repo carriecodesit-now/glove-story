@@ -1,13 +1,13 @@
 /*
   GameArchives.jsx
   Displays a list of all saved games fetched from Firebase Firestore.
-  Shows opponent, date, season or tournament, saves, goals allowed,
+  Shows opponent, date, season or tournament, saves, goals allowed, pass backs
   and clean sheet status for each game.
   Users can click any game to view its full details.
 */
 
 import { useState, useEffect } from 'react'
-import { collection, getDocs, orderBy, query } from 'firebase/firestore'
+import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../firebase'
 import { useNavigate } from 'react-router-dom'
 
@@ -56,9 +56,9 @@ function GameArchives() {
                         key={game.id}
                         onClick={() => navigate(`/game/${game.id}`)}
                         className="bg-green-800 p-4 rounded-2xl cursor-pointer hover:bg-green-700">
-                        <div classname="flex justify-between items-center">
+                        <div className="flex justify-between items-center">
                             <div>
-                                <p className="text-white fond-bold text-lg">vs {game.opponent}</p>
+                                <p className="text-white font-bold text-lg">vs {game.opponent}</p>
                                 <p className="text-green-300 text-sm">{game.date} : {game.seasonOrTournament}</p>
                                 <p className="text-green-300 text-sm capitalize">{game.type}</p>
                             </div>
@@ -66,7 +66,7 @@ function GameArchives() {
                                 <p className="text-white font-bold">{game.goalsSaved} saves</p>
                                 <p className="text-green-300 text-sm">{game.goalsAllowed} allowed</p>
                                 {game.cleanSheet === true && (
-                                    <span className="text-yellow-400 text-xs fold-bold">✨ Clean Sheet</span>
+                                    <span className="text-yellow-400 text-xs font-bold">✨ Clean Sheet</span>
                                 )}
                             </div>
                         </div>
