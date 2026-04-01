@@ -98,7 +98,7 @@ function GameDetail() {
                             { label: '⚽ Goals Allowed', value: game.goalsAllowed },
                             { label: '👟 Goal Kicks', value: game.goalKicks },
                             { label: '🦵 Punts', value: game.punts },
-                            { label: '↩️ Pass Backs', value: 'passBacks'},
+                            { label: '↩️ Pass Backs', value: game.passBacks },
                         ].map(({ label, value}) => (
                             <div key={label} className="flex justify-between bg-green-800 p-4 rounded-2xl">
                                 <span className="text-white">{label}</span>
