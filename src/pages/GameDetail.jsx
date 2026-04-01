@@ -60,8 +60,9 @@ function GameDetail() {
             type: editData.type,
             goalsSaved: Number(editData.goalsSaved),
             goalsAllowed: Number(editData.goalsAllowed),
-            goalsKicked: Number(editData.goalsKicked),
+            goalKicks: Number(editData.goalKicks),
             punts: Number(editData.punts),
+            passBacks: Number(editData.passBacks),
             cleanSheet: Number(editData.goalsAllowed) === 0,
         })
         setGame({ ...editData, cleanSheet: Number(editData.goalsAllowed) === 0 })
@@ -97,6 +98,7 @@ function GameDetail() {
                             { label: '⚽ Goals Allowed', value: game.goalsAllowed },
                             { label: '👟 Goal Kicks', value: game.goalKicks },
                             { label: '🦵 Punts', value: game.punts },
+                            { label: '↩️ Pass Backs', value: 'passBacks'},
                         ].map(({ label, value}) => (
                             <div key={label} className="flex justify-between bg-green-800 p-4 rounded-2xl">
                                 <span className="text-white">{label}</span>
@@ -135,6 +137,7 @@ function GameDetail() {
                             { label: '⚽ Goals Allowed', name: 'goalsAllowed' },
                             { label: '👟 Goal Kicks', name: 'goalKicks' },
                             { label: '🦵 Punts', name: 'punts' },
+                            { label: '↩️ Pass Backs', name: 'passBacks'},
                         ].map(({ label, name }) => (
                             <div key={name} className="flex items-center justify-between bg-green-800 p-3 rounded-xl">
                                 <label className="text-white">{label}</label>

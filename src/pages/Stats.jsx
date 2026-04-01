@@ -52,6 +52,7 @@ function Stats() {
         goalsAllowed: games.reduce((sum, g) => sum + Number(g.goalsAllowed || 0), 0),
         goalKicks: games.reduce((sum, g) => sum + Number(g.goalKicks || 0), 0),
         punts: games.reduce((sum, g) => sum + Number(g.punts || 0), 0),
+        passBacks: games.reduce((sum, g) => sum + Number(g.passBacks || 0), 0),
         cleanSheets: games.filter(g => g.cleanSheet === true).length,
     })
 
@@ -99,6 +100,7 @@ function Stats() {
                                     { label: '⚽ Goals Allowed', value: totals.goalsAllowed },
                                     { label: '👟 Goal Kicks', value: totals.goalKicks },
                                     { label: '🦵 Punts', value: totals.punts },
+                                    { label: '↩️ Pass Backs', value: totals.passBacks },
                                     { label: '✨ Clean Sheets', value: totals.cleanSheets },
                                 ].map(({ label, value }) => (
                                     <div key={label} className="flex justify-between bg-green-700 p-3 rounded-xl">

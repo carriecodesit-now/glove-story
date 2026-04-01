@@ -26,6 +26,7 @@ function LiveTracker() {
         goalsAllowed: 0,
         goalKicks: 0,
         punts: 0,
+        passBacks: 0,
     })
 
     const [gameStarted, setGameStarted] = useState(false)
@@ -36,7 +37,7 @@ function LiveTracker() {
     }
 
     const decrement = (stat) => {
-        setStats({ ...stats, [stat]: stats[stat] = 1 })
+        setStats({ ...stats, [stat]: stats[stat] - 1 })
     }
 
     const handleInfoChange = (e) => {
@@ -64,7 +65,7 @@ function LiveTracker() {
                 navigate('/archives')
             } catch (error) {
                 console.error('Error saving game:', error)
-                setSaving(fasle)
+                setSaving(false)
             }
         }
         
@@ -128,7 +129,7 @@ function LiveTracker() {
                     onClick={() => {
                         if (window.confirm('Cancel game? Stats will not be saved')) {
                             setGameStarted(false)
-                            setStats({ goalsSaved: 0, goalsAllowed: 0, goalKicks: 0, punts: 0 })
+                            setStats({ goalsSaved: 0, goalsAllowed: 0, goalKicks: 0, punts: 0, passBacks: 0 })
                         }
                     }}
                     className="text-red-400 text-sm font-bold">
@@ -142,6 +143,7 @@ function LiveTracker() {
                     { label: '⚽ Goals Allowed', stat: 'goalsAllowed', color: 'bg-red-600' },
                     { label: '👟 Goal Kicks', stat: 'goalKicks', color: 'bg-yellow-600' },
                     { label: '🦵 Punts', stat: 'punts', color: 'bg-purple-600' },
+                    { label: '↩️ Pass Backs', stat: 'passBacks', color: 'bg-orange-600'},
                 ].map(({ label, stat, color }) => (
                     <div key={stat} className="bg-green-800 p-4 rounded-2xl">
                         <p className="text-white text-lg font-bold mb-3">{label}</p>

@@ -23,6 +23,7 @@ function AddGame() {
         goalsAllowed: 0,
         goalKicks: 0,
         punts: 0,
+        passBacks: 0,
     })
 
     const handleChange = (e) => {
@@ -38,6 +39,7 @@ function AddGame() {
                 goalsAllowed: Number(formData.goalsAllowed),
                 goalKicks: Number(formData.goalKicks),
                 punts: Number(formData.punts),
+                passBacks: Number(formData.passBacks),
                 cleanSheet: Number(formData.goalsAllowed) === 0,
                 createdAt: new Date(),
             })
@@ -98,6 +100,7 @@ function AddGame() {
                     { label: '⚽ Goals Allowed', name: 'goalsAllowed' },
                     { label: '👟 Goal Kicks', name: 'goalKicks' },
                     { label: '🦵 Punts', name: 'punts' },
+                    { label: '↩️ Pass Backs', name: 'passBacks'},
                 ].map(({ label, name}) => (
                     <div key={name} className="flex items-center justify-between bg-green-800 p-3 rounded-xl">
                         <label className="text-white">{label}</label>
