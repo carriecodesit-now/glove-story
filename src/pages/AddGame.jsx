@@ -2,7 +2,7 @@
   AddGame.jsx
   Allows the user to manually enter stats for a completed game.
   Saves the game data to Firebase Firestore including opponent, date,
-  season or tournament, goals saved, goals allowed, goal kicks, punts and pass backs.
+  season or tournament, goals saved, Goals Against, goal kicks, punts and pass backs.
   Automatically calculates whether the game was a clean sheet.
 */
 
@@ -97,7 +97,7 @@ function AddGame() {
 
                 {[
                     { label: '🧤 Goals Saved', name: 'goalsSaved'},
-                    { label: '⚽ Goals Allowed', name: 'goalsAllowed' },
+                    { label: '⚽ Goals Against', name: 'goalsAllowed' },
                     { label: '👟 Goal Kicks', name: 'goalKicks' },
                     { label: '🦵 Punts', name: 'punts' },
                     { label: '↩️ Pass Backs', name: 'passBacks'},
@@ -110,7 +110,7 @@ function AddGame() {
                             value={formData[name]}
                             onChange={handleChange}
                             min="0"
-                            className="w-20 p-2 rounded-lg bg-green-700 text-white text-center"
+                            className="w-20 p-2 rounded-lg bg-green-900 text-white text-center"
                         />
                     </div>
                 ))}

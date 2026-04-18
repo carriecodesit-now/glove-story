@@ -140,7 +140,7 @@ function LiveTracker() {
             <div className="flex flex-col gap-4">
                 {[
                     { label: '🧤 Goals Saved', stat: 'goalsSaved', color: 'bg-blue-600' },
-                    { label: '⚽ Goals Allowed', stat: 'goalsAllowed', color: 'bg-red-600' },
+                    { label: '⚽ Goals Against', stat: 'goalsAllowed', color: 'bg-red-600' },
                     { label: '👟 Goal Kicks', stat: 'goalKicks', color: 'bg-yellow-600' },
                     { label: '🦵 Punts', stat: 'punts', color: 'bg-purple-600' },
                     { label: '↩️ Pass Backs', stat: 'passBacks', color: 'bg-orange-600'},
@@ -150,7 +150,7 @@ function LiveTracker() {
                         <div className="flex items-center justify-between">
                             <button
                                 onClick={() => decrement(stat)}
-                                className="bg-green-700 text-white text-3xl w-16 h-16 rounded-2xl font-bold">
+                                className="bg-green-900 text-white text-3xl w-16 h-16 rounded-2xl font-bold">
                                 -
                             </button>
                             <span className="text-white text-5xl font-bold">{stats[stat]}</span>

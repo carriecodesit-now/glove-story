@@ -14,7 +14,7 @@ Glove Story is a web app built specifically for goalkeepers to track their perfo
 
 ## Features
 
-- 🔴 **Live Game Tracker** — Track saves, goals allowed, and key events as the game happens
+- 🔴 **Live Game Tracker** — Track saves, Goals Against, and key events as the game happens
 - 📝 **Add Game Manually** — Log stats after a match is complete
 - 📁 **Game Archives** — Browse your full game history
 - 📊 **Season / Tournament Stats** — View aggregated stats across a season or tournament

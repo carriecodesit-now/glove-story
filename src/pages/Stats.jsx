@@ -2,7 +2,7 @@
   Stats.jsx
   Displays game stats grouped by season or tournament name.
   Fetches all games from Firebase Firestore and calculates totals
-  including goals saved, goals allowed, goal kicks, punts, pass backs and clean sheets.
+  including goals saved, Goals Against, goal kicks, punts, pass backs and clean sheets.
   Users can filter by All, Season, or Tournament using the filter buttons.
 */
 
@@ -97,13 +97,13 @@ function Stats() {
                             <div className="flex flex-col gap-2">
                                 {[
                                     { label: '🧤 Goals Saved', value: totals.goalsSaved },
-                                    { label: '⚽ Goals Allowed', value: totals.goalsAllowed },
+                                    { label: '⚽ Goals Against', value: totals.goalsAllowed },
                                     { label: '👟 Goal Kicks', value: totals.goalKicks },
                                     { label: '🦵 Punts', value: totals.punts },
                                     { label: '↩️ Pass Backs', value: totals.passBacks },
                                     { label: '✨ Clean Sheets', value: totals.cleanSheets },
                                 ].map(({ label, value }) => (
-                                    <div key={label} className="flex justify-between bg-green-700 p-3 rounded-xl">
+                                    <div key={label} className="flex justify-between bg-green-900 p-3 rounded-xl">
                                         <span className="text-white">{label}</span>
                                         <span className="text-white font-bold">{value}</span>
                                     </div>

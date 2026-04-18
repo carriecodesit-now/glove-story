@@ -1,7 +1,7 @@
 /*
   GameArchives.jsx
   Displays a list of all saved games fetched from Firebase Firestore.
-  Shows opponent, date, season or tournament, saves, goals allowed, pass backs
+  Shows opponent, date, season or tournament, saves, Goals Against, pass backs
   and clean sheet status for each game.
   Users can click any game to view its full details.
 */
@@ -55,7 +55,7 @@ function GameArchives() {
                     <div 
                         key={game.id}
                         onClick={() => navigate(`/game/${game.id}`)}
-                        className="bg-green-800 p-4 rounded-2xl cursor-pointer hover:bg-green-700">
+                        className="bg-green-800 p-4 rounded-2xl cursor-pointer hover:bg-green-900">
                         <div className="flex justify-between items-center">
                             <div>
                                 <p className="text-white font-bold text-lg">vs {game.opponent}</p>

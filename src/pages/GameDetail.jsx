@@ -94,7 +94,7 @@ function GameDetail() {
                     <div className="flex flex-col gap-4">
                         {[
                             { label: '🧤 Goals Saved', value: game.goalsSaved },
-                            { label: '⚽ Goals Allowed', value: game.goalsAllowed },
+                            { label: '⚽ Goals Against', value: game.goalsAllowed },
                             { label: '👟 Goal Kicks', value: game.goalKicks },
                             { label: '🦵 Punts', value: game.punts },
                             { label: '↩️ Pass Backs', value: game.passBacks },
@@ -133,7 +133,7 @@ function GameDetail() {
                         <input type="text" name="seasonOrTournament" value={editData.seasonOrTournament} onChange={handleEditChange} placeholder="Season or Tournament name" className="p-3 rounded-xl bg-green-800 text-white" />
                         {[
                             { label: '🧤 Goals Saved', name: 'goalsSaved' },
-                            { label: '⚽ Goals Allowed', name: 'goalsAllowed' },
+                            { label: '⚽ Goals Against', name: 'goalsAllowed' },
                             { label: '👟 Goal Kicks', name: 'goalKicks' },
                             { label: '🦵 Punts', name: 'punts' },
                             { label: '↩️ Pass Backs', name: 'passBacks'},
@@ -146,7 +146,7 @@ function GameDetail() {
                     </div>
                     <div className="flex gap-4 mt-8">
                         <button onClick={handleEditSave} className="flex-1 bg-white text-green-900 font-bold py-4 rounded-2xl">💾 Save</button>
-                        <button onClick={() => setEditing(false)} className="flex-1 bg-green-700 text-white font-bold py-4 rounded-2xl">Cancel</button>
+                        <button onClick={() => setEditing(false)} className="flex-1 bg-green-900 text-white font-bold py-4 rounded-2xl">Cancel</button>
                     </div>
                 </>
             )}
