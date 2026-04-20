@@ -64,7 +64,7 @@ function GameArchives() {
                             </div>
                             <div className="text-right">
                                 <p className="text-white font-bold">{game.goalsSaved} saves</p>
-                                <p className="text-green-300 text-sm">{game.goalsAllowed} allowed</p>
+                                <p className="text-green-300 text-sm">{game.goalsAllowed} against</p>
                                 {game.cleanSheet === true && (
                                     <span className="text-yellow-400 text-xs font-bold">✨ Clean Sheet</span>
                                 )}
